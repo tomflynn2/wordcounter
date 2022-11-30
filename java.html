@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html lang= "en">
+<head>
+	<link rel = "stylesheet" href = "stylesheet.css">
+	<meta charset="utf=8"
+	<meta name="viewport" content="width=device-width, initail-scale=1.0"
+</head>
+<body
+	<h1>Word Counter </h1>
+	<p> Type some text below to automatically count the words! </p>
+	<textarea id>"word" oninput="wordcount()" rows="10" cols="60"> </textarea>
+	<p> Word Count:</p><p id="totalWords">0</p>
+	<div id = "textarea">
+		<textarea id="word" oninput="wordcount()" rows="10" cols"60>
+		</textarea>
+	</div>
+	<p> Word Count:</p><p id="totalWords">0</p>
+	
+	<script>
+	function wordcount(){
+	var words = document.getElementById("word").value;
+	var count = 0;
+	var split = words.split(' ');
+	
+	for (var i =0; i <split.length; i++){
+		if (split[i] != ""){
+		count +=1;
+		}
+	}
+	document.getElementById("totalWords").innerHTML = count;
+	)
+	</scrpit>
+</body>
+</html>
